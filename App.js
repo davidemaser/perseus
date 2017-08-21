@@ -3,7 +3,7 @@
  */
 import Core from './src/base/Perseus';
 import PerseusIndex from './src/base/PerseusIndex';
-
+window['perseus'] = {};
 $.when(
   new Core(
     {

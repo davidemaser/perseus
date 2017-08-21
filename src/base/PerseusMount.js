@@ -2,8 +2,9 @@
  * Created by David Maser on 21/08/2017.
  */
 export const PerseusMount = {
-  mount(){
-
+  mount(obj){
+    window['perseus'] = {};
+    window['perseus']['core'] = obj;
   },
   unmount(){
 

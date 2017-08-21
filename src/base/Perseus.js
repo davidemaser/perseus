@@ -4,13 +4,12 @@
 import Woops from '../classes/Woops';
 import {PerseusConfig} from '../config/Params'
 import {PerseusMount} from '../base/PerseusMount';
-window['perseus'] = {};
 export default class Core{
   constructor(logic,object,functions){
     this.logic = logic;
     this.object = object;
     this.functions = functions;
-    window['perseus']['core'] = this;
+    this.rootObject = this;
     this.core();
   }
   checkParams(fail){
@@ -20,7 +19,7 @@ export default class Core{
       steps.map(function(a){
         console.log(a);
       });
-      PerseusMount.mount();
+      PerseusMount.mount(this.rootObject);
     }else{
       if(fail === true){
         PerseusMount.unmount();

@@ -4,6 +4,7 @@
 export const PerseusConfig = {
   steps:['dom','source','filters','includes'],
   dom:{
-    root:'html'
+    root:'html',
+    parent:'body'
   }
-}
+};

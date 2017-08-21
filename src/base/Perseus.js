@@ -4,11 +4,13 @@
 import Woops from '../classes/Woops';
 import {PerseusConfig} from '../config/Params'
 import {PerseusMount} from '../base/PerseusMount';
+window['perseus'] = {};
 export default class Core{
   constructor(logic,object,functions){
     this.logic = logic;
     this.object = object;
     this.functions = functions;
+    window['perseus']['core'] = this;
     this.core();
   }
   checkParams(fail){

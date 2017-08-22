@@ -38,12 +38,16 @@ export default class Core{
           })
         }
       }else{
-        new Woops({
+        new Woops(
+          {
           title:'Core error',
           level:'Fatal',
           catch:'all',
           report:true
-        },'Perseus Core has failed to run',false)
+          },
+          'Perseus Core has failed to run',
+          false
+        )
       }
     }
   }

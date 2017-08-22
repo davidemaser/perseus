@@ -11,5 +11,11 @@ export const Params = {
     mount:'window',
     revoke:true,
     units:[0,8,16,64]
+  },
+  storage:{
+    default:'localStorage',
+    max:2048,
+    fallback:'session',
+    onFail:['prompt','continue']
   }
 };

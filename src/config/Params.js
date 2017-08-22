@@ -6,5 +6,10 @@ export const Params = {
   dom:{
     root:'html',
     parent:'body'
+  },
+  root:{
+    mount:'window',
+    revoke:true,
+    units:[0,8,16,64]
   }
 };

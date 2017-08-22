@@ -34,7 +34,7 @@ export default class Core{
       if (typeof obj[o] === 'object') {
         if (Array.isArray(obj[o])) {
           obj[o].map(function (a) {
-
+            console.log(typeof a);
           })
         }
       }else{
